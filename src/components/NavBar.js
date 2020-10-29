@@ -1,12 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
-    return (
-        <div className="navbar">
-            <ul>
-                <Link className="link" to="/" exact >Take Me Home</Link>
-            </ul>
-        </div>
-    )
+  return (
+    <div className="navbar">
+      <ul>
+        <Link className="link" to="/">
+          Mars Weather
+        </Link>
+        <Link className="link" to="/nasa-apod">
+          APOD
+        </Link>
+        <Link className="link" to="/tbd">
+          TBD
+        </Link>
+      </ul>
+    </div>
+  );
 }
