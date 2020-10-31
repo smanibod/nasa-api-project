@@ -11,8 +11,8 @@ export default function NavBar() {
         <Link className="link" to="/nasa-apod">
           APOD
         </Link>
-        <Link className="link" to="/tbd">
-          TBD
+        <Link className="link" to="/gallery">
+          Gallery
         </Link>
       </ul>
     </div>

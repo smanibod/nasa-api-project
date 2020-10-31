@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import apiKey from "../utils";
+import { apiKey } from "../utils";
 const date = new Date();
 const TODAY =
   date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();

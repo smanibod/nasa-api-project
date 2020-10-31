@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import { NasaPhoto, Weather, NavBar } from "./components";
+import { NasaPhoto, Weather, NavBar, Gallery } from "./components";
 import "./App.css";
 
 export default function App() {
@@ -9,6 +9,7 @@ export default function App() {
       <NavBar />
       <Route component={Weather} path="/" exact />
       <Route component={NasaPhoto} path="/nasa-apod" />
+      <Route component={Gallery} path="/gallery" />
     </BrowserRouter>
   );
 }
