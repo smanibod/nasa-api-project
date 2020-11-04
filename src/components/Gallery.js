@@ -7,11 +7,9 @@ export default function Gallery() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(API_URL + searchData[""]);
     fetch(API_URL + searchData[""])
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.collection.items);
         setGallery(data.collection.items);
       });
   };
@@ -71,11 +69,3 @@ export default function Gallery() {
     </div>
   );
 }
-/*
-<img
-              key={item.key}
-              classNameName="gallery-img"
-              src={item.href}
-              alt=""
-            />
-*/

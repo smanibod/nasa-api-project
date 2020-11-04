@@ -23,7 +23,20 @@ export default function Weather() {
         .then((res) => res.json())
         .then((resData) => {
           const { sol_keys, validity_checks, ...solData } = resData;
+
+          console.log(resData);
           return Object.entries(solData).map(([sol, data]) => {
+            if (!data.AT || !data.HWS || !data.WD || !data.First_UTC) {
+              return {
+                sol: default_sol,
+                maxTemp: default_maxTemp,
+                minTemp: default_minTemp,
+                windSpeed: default_windSpeed,
+                windDirectionDegrees: default_windDirectionDegrees,
+                windDirectionCardinal: default_windDirectionCardinal,
+                date: new Date(default_date),
+              };
+            }
             return {
               sol: sol ? sol : default_sol,
               maxTemp: data.AT.mx ? data.AT.mx : default_maxTemp,

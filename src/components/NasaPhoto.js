@@ -61,7 +61,6 @@ export default function NasaPhoto() {
         `https://api.nasa.gov/planetary/apod?date=${newDate}&api_key=${apiKey}`
       );
       const data = await res.json();
-      console.log(data);
       setPhotoData(data);
     }
   };
